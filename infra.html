@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebForge</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2210%22 y=%2210%22 width=%2280%22 height=%2280%22 rx=%2210%22 fill=%22%23050505%22 stroke=%22%2300d9ff%22 stroke-width=%225%22/><path d=%22M30 30 L70 30 L70 70 L30 70 Z M50 30 L50 70 M30 50 L70 50%22 stroke=%22%2300d9ff%22 stroke-width=%223%22 fill=%22none%22/><circle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%23ff3c00%22/></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="infra.js" defer></script>
+</head>
+<body class="custom-scroll">
+
+    <canvas id="matrix-canvas"></canvas>
+
+    <header id="infra-header">
+        <div class="hero-content">
+            <h1 class="glitch-title small-glitch" data-text="SYSTEM_CORE">SYSTEM_CORE</h1>
+            <p class="hero-subtitle">Arquitetura de Nuvem & DevOps</p>
+        </div>
+    </header>
+
+    <nav id="main-nav">
+        <div class="logo">WEB<span class="highlight">FORGE</span></div>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="infra.html" class="active-link">Infraestrutura</a></li>
+            <li><a href="index.html#terminal-section">Terminal</a></li>
+            <li><a href="index.html#game-zone">Tetris</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section-padding">
+            <h2 class="section-title glitch-hover" data-text="Protocolos de Nuvem">Protocolos de Nuvem</h2>
+            <div class="tilt-grid">
+                <div class="tilt-card" data-tilt>
+                    <div class="tilt-content">
+                        <div class="icon-3d">☁️</div>
+                        <h3>AWS Architecture</h3>
+                        <p>Gerenciamento de instâncias EC2, configuração de buckets S3 e redes VPC seguras.</p>
+                        <div class="stat-bar"><div class="stat-fill" style="width: 85%"></div></div>
+                    </div>
+                </div>
+                <div class="tilt-card" data-tilt>
+                    <div class="tilt-content">
+                        <div class="icon-3d">🐳</div>
+                        <h3>Docker & Containers</h3>
+                        <p>Criação de ambientes isolados, otimização de imagens e orquestração básica.</p>
+                        <div class="stat-bar"><div class="stat-fill" style="width: 90%"></div></div>
+                    </div>
+                </div>
+                <div class="tilt-card" data-tilt>
+                    <div class="tilt-content">
+                        <div class="icon-3d">🚀</div>
+                        <h3>CI/CD Pipelines</h3>
+                        <p>Automação de deploy e testes utilizando GitHub Actions e integrações contínuas.</p>
+                        <div class="stat-bar"><div class="stat-fill" style="width: 75%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-grid">
+            <h2 class="section-title glitch-hover" data-text="Especificações do Operador">Especificações do Operador</h2>
+            <div class="specs-container scroll-reveal">
+                <div class="spec-row"><span class="spec-label">OS_PRINCIPAL:</span><span class="spec-value typing-effect">Windows 11 / WSL2 (Ubuntu)</span></div>
+                <div class="spec-row"><span class="spec-label">IDE_PADRÃO:</span><span class="spec-value">VS Code (Neon Theme)</span></div>
+                <div class="spec-row"><span class="spec-label">LINGUAGENS:</span><span class="spec-value">JavaScript, Python, Rust (Learning)</span></div>
+                <div class="spec-row"><span class="spec-label">DB_CONNECTION:</span><span class="spec-value">PostgreSQL / MongoDB</span></div>
+                <div class="spec-row"><span class="spec-label">CURRENT_STATUS:</span><span class="spec-value highlight">Buscando Bolsa FIAP</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 WebForge System. Desenvolvimento por <a href="https://www.linkedin.com/in/jvictor-carvalho-dev/" target="_blank" class="highlight footer-link">FlameZn/Victor</a>.</p>
+    </footer>
+</body>
+</html>

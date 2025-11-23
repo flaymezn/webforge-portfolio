@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebForge</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2210%22 y=%2210%22 width=%2280%22 height=%2280%22 rx=%2210%22 fill=%22%23050505%22 stroke=%22%2300d9ff%22 stroke-width=%225%22/><path d=%22M30 30 L70 30 L70 70 L30 70 Z M50 30 L50 70 M30 50 L70 50%22 stroke=%22%2300d9ff%22 stroke-width=%223%22 fill=%22none%22/><circle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%23ff3c00%22/></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="custom-scroll">
+
+    <header id="project-header">
+        <div class="header-overlay"></div>
+        <div class="hero-content">
+            <h1 class="glitch-title small-glitch" data-text="ARQUIVOS">ARQUIVOS</h1>
+            <p class="hero-subtitle">Compilação de Projetos e Experimentos</p>
+        </div>
+    </header>
+
+    <nav id="main-nav">
+        <div class="logo">WEB<span class="highlight">FORGE</span></div>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html" class="active-link">Projetos</a></li>
+            <li><a href="infra.html">Infraestrutura</a></li>
+            <li><a href="index.html#terminal-section">Terminal</a></li>
+            <li><a href="index.html#game-zone">Tetris</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section-padding">
+            
+            <div class="filter-container scroll-reveal">
+                <button class="filter-btn active" data-filter="all">TODOS</button>
+                <button class="filter-btn" data-filter="frontend">FRONT-END</button>
+                <button class="filter-btn" data-filter="python">PYTHON/BACK</button>
+                <button class="filter-btn" data-filter="tools">FERRAMENTAS</button>
+            </div>
+
+            <div class="projects-grid">
+                
+                <article class="project-card scroll-reveal" data-category="frontend" id="proj-webforge">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000');">
+                        <div class="overlay-tech">HTML5 • CSS3 • JS</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>WebForge Portfólio</h3>
+                        <p>Plataforma interativa com Tetris engine própria, efeitos de partículas e design Cyberpunk.</p>
+                        <div class="project-links">
+                            <button onclick="openModal('webforge', 'demo')" class="neon-btn small-btn">VER DEMO</button>
+                            <button onclick="openModal('webforge', 'repo')" class="neon-btn small-btn">CÓDIGO</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card scroll-reveal" data-category="python" id="proj-bot">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000');">
+                        <div class="overlay-tech">PYTHON • SELENIUM</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Bot Coleta de Dados</h3>
+                        <p>Automação para extração de leads do Google Maps com tratamento em Pandas.</p>
+                        <div class="project-links">
+                            <button onclick="openModal('bot', 'demo')" class="neon-btn small-btn">VER DEMO</button>
+                            <button onclick="openModal('bot', 'repo')" class="neon-btn small-btn">CÓDIGO</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card scroll-reveal" data-category="tools" id="proj-cli">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000');">
+                        <div class="overlay-tech">RUST • CLI</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CLI System Monitor</h3>
+                        <p>Ferramenta de linha de comando para monitoramento de recursos em tempo real.</p>
+                        <div class="project-links">
+                            <button onclick="openModal('cli', 'demo')" class="neon-btn small-btn">VER DEMO</button>
+                            <button onclick="openModal('cli', 'repo')" class="neon-btn small-btn">CÓDIGO</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div id="project-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-window hologram-container">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <div class="modal-header">
+                <h2 id="modal-title">NOME DO PROJETO</h2>
+                <span id="modal-tag" class="modal-badge">TIPO</span>
+            </div>
+            <div class="modal-body">
+                <div id="modal-content-area"></div>
+            </div>
+            <div class="modal-footer">
+                <p>> Conexão Segura Estabelecida. Acesso Liberado.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 WebForge System. Desenvolvimento por <a href="https://www.linkedin.com/in/jvictor-carvalho-dev/" target="_blank" class="highlight footer-link">FlameZn/Victor</a>.</p>
+    </footer>
+
+    <script>
+        let projectData = {};
+
+        // CARREGA O JSON
+        fetch('dados.json')
+            .then(r => r.json())
+            .then(d => projectData = d)
+            .catch(e => console.error("Erro ao carregar JSON:", e));
+
+        const modal = document.getElementById('project-modal');
+        const contentArea = document.getElementById('modal-content-area');
+        const modalTitle = document.getElementById('modal-title');
+        const modalTag = document.getElementById('modal-tag');
+
+        window.openModal = function(id, type) {
+            // Verifica se já carregou o JSON
+            if (Object.keys(projectData).length === 0) {
+                alert("Carregando base de dados... Aguarde.");
+                return;
+            }
+
+            const data = projectData[id];
+            if(!data) return;
+
+            modal.style.display = 'flex';
+            modalTitle.innerText = data.title;
+            
+            if (type === 'demo') {
+                modalTag.innerText = "VISUALIZAÇÃO";
+                contentArea.innerHTML = `<p style="margin-bottom: 20px; color: #ccc;">${data.desc}</p><div class="fake-browser"><div class="browser-header"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div><img src="${data.demoImg}" style="width: 100%; height: auto; display: block;"></div>`;
+            } else {
+                modalTag.innerText = "CÓDIGO FONTE";
+                contentArea.innerHTML = `<div class="code-block"><pre><code>${data.code.replace(/</g, "&lt;")}</code></pre></div>`;
+            }
+        };
+
+        window.closeModal = function() { modal.style.display = 'none'; };
+        window.onclick = function(event) { if (event.target == modal) closeModal(); }
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filterValue = btn.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    if(filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.classList.remove('hidden');
+                        card.classList.add('animate-in');
+                    } else {
+                        card.classList.add('hidden');
+                        card.classList.remove('animate-in');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebForge</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2210%22 y=%2210%22 width=%2280%22 height=%2280%22 rx=%2210%22 fill=%22%23050505%22 stroke=%22%2300d9ff%22 stroke-width=%225%22/><path d=%22M30 30 L70 30 L70 70 L30 70 Z M50 30 L50 70 M30 50 L70 50%22 stroke=%22%2300d9ff%22 stroke-width=%223%22 fill=%22none%22/><circle cx=%2250%22 cy=%2250%22 r=%228%22 fill=%22%23ff3c00%22/></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="custom-scroll">
+
+    <div id="tetris-popup">TETRIS</div>
+    <div id="game-over-popup">GAME OVER</div>
+    <div id="youtube-audio-player" style="position: fixed; top: -9999px; opacity: 0; pointer-events: none;"></div>
+
+    <header id="base">
+        <canvas id="canvas-particles"></canvas>
+        <div class="hero-content">
+            <h1 class="glitch-title" data-text="WEBFORGE">WEBFORGE</h1>
+            <div class="subtitle-wrapper" title="Clique para reiniciar animação">
+                <p class="hero-subtitle"><span id="typewriter-text"></span><span class="cursor">|</span></p>
+            </div>
+            <div class="scroll-indicator">▼ SCROLL DOWN ▼</div>
+        </div>
+    </header>
+
+    <nav id="main-nav">
+        <div class="logo">WEB<span class="highlight">FORGE</span></div>
+        <ul>
+            <li><a href="index.html" class="active-link">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="infra.html">Infraestrutura</a></li>
+            <li><a href="#terminal-section">Terminal</a></li>
+            <li><a href="#game-zone">Tetris</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="demos" class="section-padding">
+            <h2 class="section-title glitch-hover" data-text="Arsenal Tecnológico">Arsenal Tecnológico</h2>
+            <div class="grid-container">
+                <article class="card scroll-reveal scanner-effect">
+                    <div class="card-icon">🔥</div>
+                    <h3>HTML5 Semântico</h3>
+                    <p>SEO otimizado e Acessibilidade (ARIA) nativa.</p>
+                </article>
+                <article class="card scroll-reveal scanner-effect">
+                    <div class="card-icon">⚡</div>
+                    <h3>CSS3 Moderno</h3>
+                    <p>Flexbox, Grid, Animations e Glassmorphism.</p>
+                </article>
+                <article class="card scroll-reveal scanner-effect">
+                    <div class="card-icon">⚛️</div>
+                    <h3>JavaScript Puro</h3>
+                    <p>Lógica complexa, Áudio API e Renderização Otimizada.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="terminal-section" class="section-padding bg-grid">
+            <h2 class="section-title glitch-hover" data-text="Acesso ao Terminal">Acesso ao Terminal</h2>
+            <div class="terminal-window scroll-reveal">
+                <div class="terminal-header">
+                    <div class="traffic-lights">
+                        <span class="red"></span><span class="yellow"></span><span class="green"></span>
+                    </div>
+                    <div class="terminal-title">guest@webforge-system:~</div>
+                </div>
+                <div class="terminal-body" id="terminal-output">
+                    <p class="system-msg">WebForge OS v1.0.0 - Inicializado.</p>
+                    <p class="system-msg">Digite <span class="highlight">'help'</span> para ver os comandos disponíveis.</p>
+                    <br>
+                </div>
+                <div class="terminal-input-area">
+                    <span class="prompt">guest@webforge:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off">
+                </div>
+            </div>
+        </section>
+
+        <section id="jornada" class="section-padding">
+            <h2 class="section-title glitch-hover" data-text="Minha Jornada">Minha Jornada</h2>
+            <div class="timeline container-limit">
+                <div class="timeline-item scroll-reveal">
+                    <span class="date">2020</span>
+                    <h3>Início na Programação</h3>
+                    <p>Primeiros passos com lógica, hardware e eletrônica.</p>
+                </div>
+                <div class="timeline-item scroll-reveal">
+                    <span class="date">2025</span>
+                    <h3>Imersão Alura</h3>
+                    <p>Desenvolvendo projetos reais e dominando o Front-end.</p>
+                </div>
+                <div class="timeline-item scroll-reveal">
+                    <span class="date">Futuro</span>
+                    <h3>Arquiteto de Soluções Cloud</h3>
+                    <p>Projetando infraestruturas escaláveis e de alta performance na nuvem.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-zone" class="section-padding">
+            <h2 class="section-title glitch-hover" data-text="Desafio Neural: Tetris">Desafio Neural: Tetris</h2>
+            
+            <div class="game-wrapper scroll-reveal">
+                <div class="game-container">
+                    
+                    <div id="game-menu-overlay" class="menu-overlay">
+                        <div id="initial-play-btn-container">
+                            <h2 class="menu-title">SISTEMA PRONTO</h2>
+                            <button id="btn-initial-play" class="neon-btn neon-btn-large">INICIAR CONEXÃO</button>
+                        </div>
+
+                        <div id="difficulty-selection" style="display: none;">
+                            <h2 class="menu-title">CONFIGURAR CPU</h2>
+                            <div class="difficulty-buttons">
+                                <button class="neon-btn difficulty-btn" data-level="easy">FÁCIL</button>
+                                <button class="neon-btn difficulty-btn" data-level="medium">MÉDIO</button>
+                                <button class="neon-btn difficulty-btn" data-level="hard">DIFÍCIL</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="game-over-overlay" class="menu-overlay" style="display: none;">
+                        <h2 class="menu-title error-text">FALHA NO SISTEMA</h2>
+                        <p>Sua pontuação final:</p>
+                        <div id="final-score-display">0</div>
+                        <button id="btn-try-again" class="neon-btn neon-btn-large error-btn">TENTAR NOVAMENTE</button>
+                    </div>
+
+                    <canvas id="tetris" width="360" height="600"></canvas>
+                    
+                    <div class="game-sidebar">
+                        <div class="score-box">
+                            <h3>SCORE</h3>
+                            <div id="score">0</div>
+                            <p class="level-indicator">Modo: <span id="mode-indicator">--</span></p>
+                        </div>
+                        
+                        <div class="next-piece-box">
+                            <h3>NEXT</h3>
+                            <canvas id="next-piece" width="100" height="100"></canvas>
+                        </div>
+
+                        <div class="controls-wasd-grid">
+                            <div class="control-key-group up">
+                                <div class="keys-row"><span class="key">W</span><span class="key">↑</span></div>
+                                <span class="key-label">RODAR</span>
+                            </div>
+                            <div class="control-middle-row">
+                                <div class="control-key-group left">
+                                    <div class="keys-row"><span class="key">A</span><span class="key">←</span></div>
+                                    <span class="key-label">ESQ.</span>
+                                </div>
+                                <div class="control-key-group down">
+                                    <div class="keys-row"><span class="key">S</span><span class="key">↓</span></div>
+                                    <span class="key-label">DESCER</span>
+                                </div>
+                                <div class="control-key-group right">
+                                    <div class="keys-row"><span class="key">D</span><span class="key">→</span></div>
+                                    <span class="key-label">DIR.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="game-controls-buttons">
+                            <button id="btn-pause-game" class="neon-btn" disabled>PAUSAR</button>
+                            <button id="btn-restart-game" class="neon-btn" disabled>REINICIAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section-padding bg-grid">
+            <h2 class="section-title glitch-hover" data-text="Conecte-se">Conecte-se</h2>
+            
+            <div class="contact-cards scroll-reveal">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jovitorzn@gmail.com&su=Contato+via+WebForge" target="_blank" class="contact-card-item">
+                    <div class="icon">✉️</div>
+                    <div class="info">
+                        <h3>EMAIL SECRETO</h3>
+                        <p>jovitorzn@gmail.com</p>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/jvictor-carvalho-dev/" target="_blank" class="contact-card-item">
+                    <div class="icon">🔗</div>
+                    <div class="info">
+                        <h3>REDE NEURAL</h3>
+                        <p>LinkedIn Profile</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="contact-wrapper scroll-reveal">
+                <form id="contactForm" class="contact-form">
+                    <input type="text" placeholder="Seu Nome / Codinome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <textarea placeholder="Sua Mensagem Criptografada" rows="4"></textarea>
+                    <button type="submit" class="neon-btn">TRANSMITIR DADOS</button>
+                </form>
+
+                <div id="contactSuccess" class="contact-success" style="display: none;">
+                    <div class="terminal-log">
+                        <p>> Iniciando handshake...</p>
+                        <p>> Criptografando payload [256-bit]...</p>
+                        <p>> Uploading para servidor seguro...</p>
+                        <p class="success-msg">> DADOS TRANSMITIDOS COM SUCESSO.</p>
+                    </div>
+                    <div class="success-icon">✅</div>
+                    <button id="btn-new-message" type="button" class="neon-btn small-btn">NOVA MENSAGEM</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WebForge System. Desenvolvimento por <a href="https://www.linkedin.com/in/jvictor-carvalho-dev/" target="_blank" class="highlight footer-link">FlameZn/Victor</a>.</p>
+    </footer>
+</body>
+</html>

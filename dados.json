@@ -1,0 +1,20 @@
+{
+  "webforge": {
+    "title": "WEBFORGE PORTFÓLIO",
+    "desc": "Plataforma desenvolvida para demonstrar domínio em Front-end sem frameworks. Inclui engine de jogos (Arcade), sistema de partículas, navegação SPA simulada e consumo de dados JSON.",
+    "code": "const hero = document.querySelector('.hero');\n\n// Efeito Parallax Otimizado\nwindow.addEventListener('scroll', () => {\n  requestAnimationFrame(() => {\n    let value = window.scrollY;\n    hero.style.transform = `translateY(${value * 0.5}px)`;\n  });\n});",
+    "demoImg": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000"
+  },
+  "bot": {
+    "title": "PYTHON DATA MINER",
+    "desc": "Bot de automação (RPA) utilizando Selenium para varredura de dados públicos. Integração com Pandas para tratamento de CSV e limpeza de dados brutos.",
+    "code": "import selenium\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\n\nclass DataMiner:\n    def __init__(self):\n        self.driver = webdriver.Chrome()\n    \n    def start_crawl(self, url):\n        self.driver.get(url)\n        # Lógica de extração...",
+    "demoImg": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000"
+  },
+  "cli": {
+    "title": "SYSTEM MONITOR CLI",
+    "desc": "Ferramenta de linha de comando (CLI) escrita em Rust para monitoramento de recursos do servidor (CPU/RAM) em tempo real com baixo overhead.",
+    "code": "use sysinfo::{System, SystemExt};\n\nfn main() {\n    let mut sys = System::new_all();\n    sys.refresh_all();\n    println!(\"CPU Usage: {}%\", sys.global_cpu_info().cpu_usage());\n    println!(\"Total Memory: {} KB\", sys.total_memory());\n}",
+    "demoImg": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000"
+  }
+}
